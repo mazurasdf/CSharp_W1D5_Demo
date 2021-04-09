@@ -1,0 +1,20 @@
+@model Octopus
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-center" style="background-color:@Model.Color;">
+        <h1 class="display-4">@Model.Name</h1>
+        <h2>wears a @Model.Hat</h2>
+        <h2>Age: @Model.Birthday</h2>
+        <h2>Color: @Model.Color</h2>
+        <h2>NumTentacles: @Model.NumTentacles</h2>
+    </div>
+</body>
+</html>

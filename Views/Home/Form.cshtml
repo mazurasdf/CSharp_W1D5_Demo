@@ -1,0 +1,59 @@
+@model Octopus
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Create a new Octopus(with a hat, of course!)</h1>
+        <form asp-action="Submit" asp-controller="Home" method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="alert-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Birthday"></label>
+                <input asp-for="Birthday" class="form-control" />
+                <span asp-validation-for="Birthday" class="alert-danger"></span>
+            </div>
+
+            <label asp-for="Hat"></label>
+            <select asp-for="Hat" class="custom-select custom-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="Fedora">Fedora</option>
+                <option value="Top Hat">Top Hat</option>
+                <option value="Beanie">Beanie</option>
+                <option value="Santa Hat">Santa Hat</option>
+                <option value="Flight Cap">Flight Cap</option>
+                <option value="Tin Foil">Tin Foil</option>
+                <option value="Cowboy Hat">Cowboy Hat</option>
+                <option value="Pope Hat">Pope Hat</option>
+                <option value="Helmet">Helmet</option>
+                <option value="Fish Head">Fish Head</option>
+                <option value="Propeller Hat">Propeller Hat</option>
+            </select>
+            <span asp-validation-for="Hat" class="alert-danger"></span>
+
+            <div class="form-group">
+                <label asp-for="NumTentacles"></label>
+                <input asp-for="NumTentacles" class="form-control"/>
+                <span asp-validation-for="NumTentacles" class="alert-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Color"></label>
+                <input asp-for="Color" class="form-control"/>
+                <span asp-validation-for="Color" class="alert-danger"></span>
+            </div>
+
+            <input type="submit" value="Create Octopus" class=" btn btn-lg btn-success"/>
+        </form>
+    </div>
+</body>
+</html>
